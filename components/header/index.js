@@ -15,6 +15,8 @@ export function Header() {
       </div>
       <style jsx>{`
         .container {
+          position: sticky;
+          top: -100px;
           display: flex;
           justify-content: center;
           background-color: #ececec;
@@ -32,6 +34,7 @@ export function Header() {
         }
         .logo {
           width: 100%;
+          padding: 0 10px;
         }
         .social {
           position: absolute;

@@ -8,8 +8,13 @@ function Home() {
   return (
     <div>
       <Header />
-      Welcome to Next.js!
+      <div className="body">Welcome to Next.js!</div>
       <Footer />
+      <style jsx>{`
+        .body {
+          height: 100vh;
+        }
+      `}</style>
     </div>
   );
 }

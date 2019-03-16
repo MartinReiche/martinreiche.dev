@@ -5,7 +5,8 @@ export function Footer() {
     <div className="container">
       <style jsx>{`
         .container {
-          border: 1px solid red;
+          height: calc(100vh - 100px);
+          background-color: #008090;
         }
       `}</style>
     </div>
