@@ -1,0 +1,27 @@
+{
+  "name": "martinreiche.dev",
+  "version": "1.0.0",
+  "description": "Source code for martinreiche.dev",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MartinReiche/martinreiche.dev.git"
+  },
+  "author": "Martin Reiche",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MartinReiche/martinreiche.dev/issues"
+  },
+  "homepage": "https://github.com/MartinReiche/martinreiche.dev#readme",
+  "dependencies": {
+    "next": "^8.0.3",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4"
+  }
+}
