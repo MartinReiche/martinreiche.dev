@@ -32,6 +32,7 @@ class MyDocument extends Document {
             html, body {
               padding: 0;
               margin: 0;
+              font-family: 'Roboto', sans-serif;
             }
           `}
           </style>
