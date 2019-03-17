@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Social from '../social';
+import Locale from './locale';
 
 export function Header() {
   return (
@@ -8,6 +9,9 @@ export function Header() {
       <div className="center">
         <div className="logoContainer">
           <img className="logo" src="/static/logo.svg" alt="" />
+        </div>
+        <div className="locale">
+          <Locale />
         </div>
         <div className="social">
           <Social />
@@ -26,20 +30,26 @@ export function Header() {
           flex: 1 1 auto;
           max-width: 1024px;
           position: relative;
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-end;
         }
         .logoContainer {
-          position: absolute;
+          max-width: 400px;
           bottom: 20px;
           left: 0;
         }
         .logo {
           width: 100%;
-          padding: 0 10px;
+          padding: 10px;
         }
         .social {
           position: absolute;
           top: 20px;
           right: 0;
+        }
+        .locale {
+          margin-bottom: 10px;
         }
       `}</style>
     </div>
