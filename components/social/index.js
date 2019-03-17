@@ -3,9 +3,18 @@ import React from 'react';
 export function Social() {
   return (
     <div className="container">
-      <img className="image" src="/static/so.png" />
-      <img className="image" src="/static/twitter.png" />
-      <img className="image github" src="/static/github.png" />
+      <a
+        href="https://stackoverflow.com/users/2670764/martin-reiche"
+        target="_blank"
+      >
+        <img className="image" src="/static/so.png" />
+      </a>
+      <a href="https://twitter.com/martin_reiche" target="_blank">
+        <img className="image" src="/static/twitter.png" />
+      </a>
+      <a href="https://github.com/MartinReiche" target="_blank">
+        <img className="image github" src="/static/github.png" />
+      </a>
       <style jsx>{`
         .container {
           height: 50px;
