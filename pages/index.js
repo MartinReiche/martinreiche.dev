@@ -3,18 +3,16 @@ import React from 'react';
 
 import Header from '../components/header';
 import Footer from '../components/footer';
+import About from '../components/about';
+import Clients from '../components/clients';
 
 function Home() {
   return (
     <div>
       <Header />
-      <div className="body">Welcome to Next.js!</div>
+      <About />
+      <Clients />
       <Footer />
-      <style jsx>{`
-        .body {
-          height: 100vh;
-        }
-      `}</style>
     </div>
   );
 }
