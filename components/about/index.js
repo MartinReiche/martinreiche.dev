@@ -11,10 +11,11 @@ export function About() {
         individueller interaktiver Webapplikationen spezialisiert hat. Ich liebe
         JavaScript und nutze es sowohl zur Entwicklung von Client- als auch
         Serverapplikationen. <br />
-        <br /> Ich habe einen Wissenschaftlichen Hintergrund in
-        Neurowissenschaften und Erfahrungen im Bereich der Analyse komplexer
-        Daten. Tief druin bin ich immernoch passionierter Wissenschaftler, der
-        es liebt komplexe Probleme zu bearbieten. Forden Sie mich heraus!
+        <br /> Ich habe einen wissenschaftlichen Hintergrund in
+        Neurowissenschaften weshalb ich Erfahrungen im Bereich der Analyse
+        komplexer Daten habe. Tief im Innern bin ich immernoch passionierter
+        Wissenschaftler, der es liebt komplexe Probleme zu lösen. Forden Sie
+        mich heraus!
       </div>
     ) : (
       <div>
