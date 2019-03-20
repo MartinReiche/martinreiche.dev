@@ -18,6 +18,10 @@ const messages = {
   success: {
     de: 'Vielen Dank für Ihre Kontaktanfrage.',
     en: 'Thank you very muich for your request.'
+  },
+  error: {
+    de: 'Es ist ein fehler aufgetreten.',
+    en: 'An Error has occurred.'
   }
 };
 
@@ -34,25 +38,26 @@ const errors = {
 export function ContactForm() {
   const [{ locale, contact }, dispatch] = getState();
 
-  function onSubmit(form) {
+  async function onSubmit(form) {
     const firebase = initFirebase();
     const db = firebase.firestore();
-    dispatch(startLoading());
-    setTimeout(() => {
-      dispatch(stopLoading());
-      dispatch(dispatchMessage(messages.success[locale]));
-    }, 2000);
 
     const request = {
-      name: form.name || 'unknown',
-      email: form.email || 'unknown',
-      body: form.body || 'n/a',
+      name: form.name.value || 'unknown',
+      email: form.email.value || 'unknown',
+      body: form.body.value || 'n/a',
       locale
     };
 
-    console.log(request);
-
-    // db.colle
+    dispatch(startLoading());
+    try {
+      await db.collection('requests').add(request);
+      dispatch(stopLoading());
+      dispatch(dispatchMessage(messages.success[locale]));
+    } catch (e) {
+      dispatch(stopLoading());
+      dispatch(dispatchError(messages.error[locale]));
+    }
 
     // return (
 
