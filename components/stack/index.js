@@ -6,52 +6,7 @@ const title = {
   en: 'Technology Stack'
 };
 
-const reactText = {
-  de: (
-    <div>
-      React.js ist eine deklarative, komponentenbasierte JavaScript Bibliothek
-      zur Entwicklung von User Interfaces.
-    </div>
-  ),
-  en: (
-    <div>
-      React.js is a declarative, component-based JavaScript library for building
-      user interfaces.
-    </div>
-  )
-};
-
-const nodeText = {
-  de: (
-    <div>
-      Node.js ist eine JavaScript Laufzeitumgebung, basierend auf Chromes V8
-      engine, die es ermöglicht JavaScript außerhalb des browsers zu nutzen.
-    </div>
-  ),
-  en: (
-    <div>
-      Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine
-      that enables us to run JavaScript outside of the browser.
-    </div>
-  )
-};
-
-const firebaseText = {
-  de: (
-    <div>
-      Firebase ist eine Entwicklungsplatform für mobile- und Webapplikationen
-      die eine Vielzahl an services und Tools zur Entwicklung hochqualitativer
-      Applikationen bereitstellt
-    </div>
-  ),
-  en: (
-    <div>
-      Firebase is a mobile and web app development platform that provides
-      developers with a plethora of tools and services to help them develop
-      high-quality apps.
-    </div>
-  )
-};
+import texts from './texts';
 
 export function Stack() {
   const [{ locale }] = getState();
@@ -66,7 +21,7 @@ export function Stack() {
                 <img src="/static/react.png" alt="" className="image" />
               </a>
             </div>
-            <div className="description">{reactText[locale]}</div>
+            <div className="description">{texts.react[locale]}</div>
           </div>
           <div className="item">
             <div className="logo">
@@ -74,7 +29,7 @@ export function Stack() {
                 <img src="/static/node.png" alt="" className="image" />
               </a>
             </div>
-            <div className="description">{nodeText[locale]}</div>
+            <div className="description">{texts.node[locale]}</div>
           </div>
           <div className="item">
             <div className="logo">
@@ -82,7 +37,34 @@ export function Stack() {
                 <img src="/static/firebase.png" alt="" className="image" />
               </a>
             </div>
-            <div className="description">{firebaseText[locale]}</div>
+            <div className="description">{texts.firebase[locale]}</div>
+          </div>
+
+          <div className="item">
+            <div className="logo">
+              <a href="https://electronjs.org/" target="_blank">
+                <img src="/static/electron.png" alt="" className="image" />
+              </a>
+            </div>
+            <div className="description">{texts.electron[locale]}</div>
+          </div>
+
+          <div className="item">
+            <div className="logo">
+              <a href="https://material-ui.com/" target="_blank">
+                <img src="/static/mui.svg" alt="" className="image" />
+              </a>
+            </div>
+            <div className="description">{texts.mui[locale]}</div>
+          </div>
+
+          <div className="item">
+            <div className="logo">
+              <a href="https://zeit.co/blog/next" target="_blank">
+                <img src="/static/next.png" alt="" className="image" />
+              </a>
+            </div>
+            <div className="description">{texts.next[locale]}</div>
           </div>
         </div>
       </div>
