@@ -3,8 +3,8 @@ import { getState } from '../../state';
 import ContactForm from './form';
 
 const title = {
-  de: 'Kontaktieren Sie mich',
-  en: 'Get in touch'
+  de: 'Kontaktieren Sie mich!',
+  en: 'Get in touch!'
 };
 
 export function Contact() {

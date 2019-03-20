@@ -20,7 +20,7 @@ const styles = theme => ({
       minWidth: '288px'
     }
   },
-  message: { backgroundColor: '#008090' },
+  message: { backgroundColor: '#4d4d4d' },
   error: { backgroundColor: red[800] }
 });
 
@@ -56,7 +56,11 @@ function NotificationSnackBar(props) {
           className: error ? classes.error : classes.message,
           'aria-describedby': 'message-id'
         }}
-        message={<span id="message-id">{messageText}</span>}
+        message={
+          <span id="message-id" style={{ color: '#ececec' }}>
+            {messageText}
+          </span>
+        }
         action={[
           <IconButton
             key="close"
