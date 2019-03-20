@@ -50,6 +50,16 @@ export function Footer() {
           padding: 10px;
           font-size: 20px;
         }
+        @media all and (max-width: 512px) {
+          .footer {
+            flex-direction: column;
+          }
+          .social {
+            margin-top: 100px;
+            display: flex;
+            justify-content: center;
+          }
+        }
       `}</style>
     </div>
   );
