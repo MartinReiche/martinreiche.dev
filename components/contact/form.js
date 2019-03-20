@@ -5,8 +5,6 @@ import TextField from '@material-ui/core/TextField';
 import Loading from '../loading';
 import { Form } from '../forms';
 
-// import validateEmail from '../../utils/validateEmail';
-
 import {
   getState,
   startLoading,
@@ -14,7 +12,7 @@ import {
   dispatchMessage,
   dispatchError
 } from '../../state';
-// import { initFirebase } from '../../utils';
+import { initFirebase } from '../../utils';
 
 const messages = {
   success: {
@@ -37,8 +35,8 @@ export function ContactForm() {
   const [{ locale, contact }, dispatch] = getState();
 
   function onSubmit(form) {
-    // const firebase = initFirebase();
-    // const db = firebase.firestore();
+    const firebase = initFirebase();
+    const db = firebase.firestore();
     dispatch(startLoading());
     setTimeout(() => {
       dispatch(stopLoading());

@@ -9,7 +9,7 @@ export function Footer() {
   function renderAddress() {
     return locale === 'de' ? (
       <div>
-        Martin Reiche <br />
+        Dr. Martin Reiche <br />
         Full Stack Web Developer <br />
         Wandererstraße 89c <br />
         90431 Nürnberg <br />
@@ -17,7 +17,7 @@ export function Footer() {
       </div>
     ) : (
       <div>
-        Martin Reiche <br />
+        Martin Reiche, PhD <br />
         Full Stack Web Developer <br />
         Wandererstraße 89c <br />
         90431 Nuremberg, Germany <br />
