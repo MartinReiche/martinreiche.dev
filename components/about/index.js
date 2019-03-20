@@ -31,7 +31,7 @@ export function About() {
     <div className="container">
       <div className="center">
         <div className="portrait">
-          <img src="/static/avatar.jpg" alt="" className="image" />
+          <img src="/static/portrait_sm.png" alt="" className="image" />
         </div>
         <div className="text">{renderText()}</div>
       </div>
