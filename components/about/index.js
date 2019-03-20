@@ -6,7 +6,16 @@ export function About() {
   const [{ locale }] = getState();
   function renderText() {
     return locale === 'de' ? (
-      <div>DEUTCH</div>
+      <div>
+        Ich bin Full Stack Web Developer, der sich auf die Entwicklung
+        individueller interaktiver Webapplikationen spezialisiert hat. Ich liebe
+        JavaScript und nutze es sowohl zur Entwicklung von Client- als auch
+        Serverapplikationen. <br />
+        <br /> Ich habe einen Wissenschaftlichen Hintergrund in
+        Neurowissenschaften und Erfahrungen im Bereich der Analyse komplexer
+        Daten. Tief druin bin ich immernoch passionierter Wissenschaftler, der
+        es liebt komplexe Probleme zu bearbieten. Forden Sie mich heraus!
+      </div>
     ) : (
       <div>
         I am a full stack web developer specialized in building individually
@@ -28,25 +37,43 @@ export function About() {
       </div>
       <style jsx>{`
         .container {
+          font-family: 'Roboto';
+          font-weight: 200;
           background-color: #008090aa;
           background: #008090aa url('/static/about_bg.svg') no-repeat left top;
+          padding: 50px 0px;
         }
         .center {
-          min-height: 120vh;
           max-width: 1024px;
           margin: auto;
           display: flex;
-          padding: 100px 10px;
+          align-items: center;
+          justify-content: space-between;
+          padding: 10px;
         }
         .portrait {
+          flex: 0 0 300px;
         }
         .text {
-          padding: 50px 10px 5050;
+          flex: 1 1 auto;
+          margin-left: 50px;
+          color: #ececec;
         }
         .image {
-          flex: 1 1 auto;
-          max-width: 300px;
+          width: 100%;
           border-radius: 50%;
+        }
+        @media all and (max-width: 768px) {
+          .portrait {
+            max-width: 300px;
+          }
+          .center {
+            flex-direction: column;
+          }
+          .text {
+            margin-top: 50px;
+            margin-left: 0;
+          }
         }
       `}</style>
     </div>
