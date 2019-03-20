@@ -8,3 +8,6 @@ export const ERROR = 'error';
 export const MESSAGE = 'message';
 // LOCALE CONSTANTS
 export const SET_LOCALE = 'set_locale';
+// CONTACT CONSTANTS
+export const CONTACT_START_LOADING = 'contact_start_loading';
+export const CONTACT_STOP_LOADING = 'contact_stop_loading';

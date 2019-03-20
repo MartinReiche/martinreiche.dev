@@ -1,5 +1,6 @@
 import React from 'react';
 import { getState } from '../../state';
+import ContactForm from './form';
 
 const title = {
   de: 'Kontaktieren Sie mich',
@@ -12,6 +13,9 @@ export function Contact() {
     <div className="container">
       <div className="center">
         <h1 className="heading">{title[locale]}</h1>
+        <div className="form">
+          <ContactForm />
+        </div>
       </div>
       <style jsx>{`
         .container {
@@ -21,12 +25,14 @@ export function Contact() {
           padding: 10px;
           max-width: 1024px;
           margin: auto;
-          height: 50vh;
         }
         .heading {
           font-family: 'Roboto';
           font-weight: 200;
           color: #4d4d4d;
+        }
+        .form {
+          margin: 100px 0;
         }
       `}</style>
     </div>

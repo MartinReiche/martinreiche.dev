@@ -5,12 +5,14 @@ import { SET_LOCALE } from './types';
 // Import Reducers
 import localeReducer, { initialState as initialLocale } from './locale';
 import messagesReducer, { initialState as initialMessages } from './messages';
+import contactReducer, { initialState as initialContact } from './messages';
 import { persistLocaleState } from '../utils';
 
 // Combine Initial State
 export const initialState = {
   locale: initialLocale,
-  messages: initialMessages
+  messages: initialMessages,
+  contact: initialContact
 };
 
 // Combine all reducers
@@ -20,13 +22,15 @@ export const rootReducer = (state, action) => {
   // return root reducer
   return {
     locale: localeReducer(state.locale, action),
-    messages: messagesReducer(state.messages, action)
+    messages: messagesReducer(state.messages, action),
+    contact: contactReducer(state.contact, action)
   };
 };
 
 // Export actionCreators
 export * from './locale';
 export * from './messages';
+export * from './contact';
 
 // Define Utility Functions and Provider
 export const StateContext = createContext();
