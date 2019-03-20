@@ -46,7 +46,7 @@ export const StateProvider = ({
 StateProvider.propTypes = {
   reducer: PropTypes.func.isRequired,
   initialState: PropTypes.object.isRequired,
-  children: PropTypes.array.isRequired
+  children: PropTypes.object.isRequired
 };
 // Gets called from functional Component to access global state
 export const getState = () => useContext(StateContext);

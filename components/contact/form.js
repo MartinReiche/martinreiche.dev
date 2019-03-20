@@ -17,9 +17,9 @@ import {
 // import { initFirebase } from '../../utils';
 
 const messages = {
-  sending: {
-    de: 'Kontaktanfrage wird gesendet.',
-    en: 'Sending contact request.'
+  success: {
+    de: 'Vielen Dank für Ihre Kontaktanfrage.',
+    en: 'Thank you very muich for your request.'
   }
 };
 
@@ -39,10 +39,13 @@ export function ContactForm() {
   function onSubmit(form) {
     // const firebase = initFirebase();
     // const db = firebase.firestore();
-    // dispatch(startLoading(messages.sending[locale]));
+    dispatch(startLoading());
+    setTimeout(() => {
+      dispatch(stopLoading());
+      dispatch(dispatchMessage(messages.success[locale]));
+    }, 2000);
 
     const request = {
-      files: fileInfo,
       name: form.name || 'unknown',
       email: form.email || 'unknown',
       body: form.body || 'n/a',
@@ -130,7 +133,7 @@ export function ContactForm() {
   return (
     <Fragment>
       {contact.loading ? (
-        <Loading message={contact.message} />
+        <Loading />
       ) : (
         <Form
           onSubmit={onSubmit}
@@ -155,12 +158,10 @@ export function ContactForm() {
               </div>
 
               <div className="actions">
-                <div className="buttonContainer">
-                  <div className="button">
-                    <Button variant="contained" color="primary" type="submit">
-                      {labels.send[locale]}
-                    </Button>
-                  </div>
+                <div className="button">
+                  <Button variant="contained" color="primary" type="submit">
+                    {labels.send[locale]}
+                  </Button>
                 </div>
               </div>
             </Fragment>
@@ -178,17 +179,9 @@ export function ContactForm() {
         }
         .actions {
           display: flex;
-          align-items: center;
-          justify-content: center;
-          height: 70px;
-        }
-        .buttonContainer {
-          flex: 1 1 auto;
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: space-between;
           align-items: flex-end;
-          height: 100%;
+          justify-content: center;
+          height: 100px;
         }
         .button {
           padding: 0 20px;

@@ -19,6 +19,7 @@ export function Header() {
       </div>
       <style jsx>{`
         .container {
+          z-index: 2;
           position: sticky;
           top: -100px;
           display: flex;

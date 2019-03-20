@@ -64,7 +64,9 @@ export function Stack() {
                 <img src="/static/next.png" alt="" className="image" />
               </a>
             </div>
-            <div className="description">{texts.next[locale]}</div>
+            <div className="description" style={{ marginTop: '0px' }}>
+              {texts.next[locale]}
+            </div>
           </div>
         </div>
       </div>
@@ -113,6 +115,7 @@ export function Stack() {
         @media all and (max-width: 768px) {
           .description {
             margin-left: 20px;
+            align-items: flex-start;
           }
         }
         @media all and (max-width: 425px) {

@@ -41,8 +41,11 @@ export function About() {
           font-family: 'Roboto';
           font-weight: 200;
           font-size: 20px;
-          background-color: #008090aa;
-          background: #008090aa url('/static/about_bg.svg') no-repeat left top;
+
+          background-color: #008090;
+           {
+            /* background: #008090aa url('/static/about_bg.svg') no-repeat left top; */
+          }
           padding: 100px 0px;
         }
         .center {
