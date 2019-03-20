@@ -40,9 +40,10 @@ export function About() {
         .container {
           font-family: 'Roboto';
           font-weight: 200;
+          font-size: 20px;
           background-color: #008090aa;
           background: #008090aa url('/static/about_bg.svg') no-repeat left top;
-          padding: 50px 0px;
+          padding: 100px 0px;
         }
         .center {
           max-width: 1024px;

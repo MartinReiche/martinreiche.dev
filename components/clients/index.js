@@ -53,6 +53,7 @@ export function Clients() {
           color: #4d4d4d;
         }
         .brands {
+          margin: 100px 0px;
           display: flex;
           flex-wrap: wrap;
           justify-content: center;
