@@ -58,39 +58,6 @@ export function ContactForm() {
       dispatch(stopLoading());
       dispatch(dispatchError(messages.error[locale]));
     }
-
-    // return (
-
-    //       console.log(request);
-
-    //       // return db.collection('requests').add(request);
-    //     })
-    //     // .then(() => {
-    //     //   setAccepted([]);
-    //     //   setRejected([]);
-    //     //   setForm({});
-    //     //   dispatch(contactStopLoading());
-    //     //   dispatch(
-    //     //     dispatchMessage(
-    //     //       locale === 'de'
-    //     //         ? 'Vielen Dank für Deine Kontaktanfrage.'
-    //     //         : 'Thank you for your request.'
-    //     //     )
-    //     //   );
-    //     // })
-    //     .catch(e => {
-    //       console.log(e);
-
-    //       dispatch(contactStopLoading());
-    //       dispatch(
-    //         dispatchError(
-    //           locale === 'de'
-    //             ? 'Es ist ein Fehler aufgetreten, versuch es später noch einmal.'
-    //             : 'An error has occurred, try again later.'
-    //         )
-    //       );
-    //     })
-    // );
   }
 
   function validate(field) {

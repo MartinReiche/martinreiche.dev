@@ -1,5 +1,3 @@
-import '../utils/bootstrap';
-// --- Post bootstrap -----
 import React from 'react';
 import App, { Container } from 'next/app';
 import Head from 'next/head';
@@ -11,10 +9,7 @@ import { StateProvider, rootReducer, initialState } from '../state';
 import NotificationSnackBar from '../components/notification';
 
 class MyApp extends App {
-  constructor() {
-    super();
-    this.pageContext = getPageContext();
-  }
+  pageContext = getPageContext();
 
   componentDidMount() {
     // Remove the server-side injected CSS.
@@ -28,10 +23,10 @@ class MyApp extends App {
     const { Component, pageProps } = this.props;
     return (
       <Container>
-        <Head>
+        {/* <Head>
           <title>Martin Reiche - Full Stack Web Developer</title>
-        </Head>
-        {/* Wrap every page in Styles and Theme providers */}
+        </Head> */}
+        {/* Wrap every page in State, Styles and Theme providers */}
         <StateProvider reducer={rootReducer} initialState={initialState}>
           <StylesProvider
             generateClassName={this.pageContext.generateClassName}

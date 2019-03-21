@@ -25,7 +25,7 @@ export function Stack() {
           </div>
           <div className="item">
             <div className="logo">
-              <a href="https://nodejs.org/en/" target="_blank">
+              <a href="https://nodejs.org/en/about/" target="_blank">
                 <img src="/static/node.png" alt="" className="image" />
               </a>
             </div>

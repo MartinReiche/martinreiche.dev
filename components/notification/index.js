@@ -14,8 +14,8 @@ const showTTL = 3000;
 const styles = theme => ({
   root: {
     [theme.breakpoints.up('768')]: {
-      bottom: theme.spacing.unit * 3,
-      right: theme.spacing.unit * 3,
+      bottom: theme.spacing(3),
+      right: theme.spacing(3),
       left: 'auto',
       minWidth: '288px'
     }

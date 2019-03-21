@@ -1,4 +1,3 @@
-import '../utils/bootstrap';
 import React from 'react';
 
 import Header from '../components/header';

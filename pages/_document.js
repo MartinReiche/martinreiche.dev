@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Document, { Head, Main, NextScript } from 'next/document';
 import flush from 'styled-jsx/server';
+import { GA_TRACKING_ID } from '../utils/gtag';
 
 class MyDocument extends Document {
   render() {
@@ -9,7 +10,30 @@ class MyDocument extends Document {
 
     return (
       <html lang="en" dir="ltr">
+        <style>
+          {`
+            html, body {
+              padding: 0;
+              margin: 0;
+              font-family: 'Roboto', sans-serif;
+            }
+          `}
+        </style>
         <Head>
+          <script
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+          />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_TRACKING_ID}');
+          `
+            }}
+          />
           <meta charSet="utf-8" />
           {/* Use minimum-scale=1 to enable GPU rasterization */}
           <meta
@@ -27,15 +51,6 @@ class MyDocument extends Document {
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"
           />
-          <style>
-            {`
-            html, body {
-              padding: 0;
-              margin: 0;
-              font-family: 'Roboto', sans-serif;
-            }
-          `}
-          </style>
         </Head>
         <body>
           <Main />
