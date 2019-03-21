@@ -109,7 +109,7 @@ export function Clients() {
         }
         .center {
           opacity: ${ready ? '1' : '0'};
-          transition: 200ms opacity 250ms ease-out;
+          transition: 200ms opacity 300ms ease-out;
           padding: 10px;
           max-width: 1024px;
           margin: auto;

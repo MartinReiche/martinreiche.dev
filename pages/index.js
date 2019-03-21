@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 
 import { getState } from '../state';
-import { Header, Footer, LoadingModal } from '../components/layout';
+import { Header, Footer } from '../components/layout';
 import About from '../components/about';
 import Clients from '../components/clients';
 import Stack from '../components/stack';
@@ -14,7 +14,6 @@ function Home() {
     <div>
       <Head title="Martin Reiche - Full Stack Web Developer" />
       <Header />
-      {!layout.aboutLoaded && <LoadingModal />}
       <div className="content">
         <About />
         <Clients />
