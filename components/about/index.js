@@ -1,21 +1,21 @@
 import React, { useState, useEffect } from 'react';
 
-import { getState } from '../../state';
+import { getState, setAboutLoaded } from '../../state';
 
 export function About() {
-  const [visible, setVisible] = useState(false);
-  const [{ locale }] = getState();
+  const [{ locale, layout }, dispatchGlobal] = getState();
 
   useEffect(() => {
     const image = new Image();
-    image.addEventListener('load', () => {
-      setVisible(true);
-    });
+    image.addEventListener('load', onLoadImage);
     image.src = '/static/portrait_sm.png';
+    return function cleanup() {
+      image.removeEventListener('load', onLoadImage);
+    };
   }, []);
 
   function onLoadImage() {
-    setVisible(true);
+    dispatchGlobal(setAboutLoaded());
   }
 
   function renderText() {
@@ -60,7 +60,7 @@ export function About() {
           overflow-x: hidden;
         }
         .center {
-          opacity: ${visible ? '1' : '0'};
+          opacity: ${layout.aboutLoaded ? '1' : '0'};
           transition: opacity 200ms ease-out;
           max-width: 1024px;
           margin: auto;

@@ -6,13 +6,15 @@ import { SET_LOCALE } from './types';
 import localeReducer, { initialState as initialLocale } from './locale';
 import messagesReducer, { initialState as initialMessages } from './messages';
 import contactReducer, { initialState as initialContact } from './messages';
+import layoutReducer, { initialState as initialLayout } from './layout';
 import { persistLocaleState } from '../utils';
 
 // Combine Initial State
 export const initialState = {
   locale: initialLocale,
   messages: initialMessages,
-  contact: initialContact
+  contact: initialContact,
+  layout: initialLayout
 };
 
 // Combine all reducers
@@ -23,7 +25,8 @@ export const rootReducer = (state, action) => {
   return {
     locale: localeReducer(state.locale, action),
     messages: messagesReducer(state.messages, action),
-    contact: contactReducer(state.contact, action)
+    contact: contactReducer(state.contact, action),
+    layout: layoutReducer(state.layout, action)
   };
 };
 
@@ -31,6 +34,7 @@ export const rootReducer = (state, action) => {
 export * from './locale';
 export * from './messages';
 export * from './contact';
+export * from './layout';
 
 // Define Utility Functions and Provider
 export const StateContext = createContext();
