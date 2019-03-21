@@ -9,18 +9,33 @@ export function sendContactMailConfirmation(request: any) {
 
   const subject =
     request.locale === 'de'
-      ? 'Deine Kontaktanfrage an subucoola'
-      : 'Your contact request to subucoola';
+      ? 'Vielen Dank für Ihre Kontaktanfrage.'
+      : 'Thank you for your contact request.';
 
   const msgBody =
     request.locale === 'de'
-      ? `Hallo ${request.name},\n\n` +
-        `wir haben deine Nachricht vom Kontaktformular erhalten und werden uns sobald wie möglich zurückmelden.\n\n` +
-        `Bis dahin,\n` +
-        `sonnigste Grüße vom Subucoola Team`
-      : `Hi ${request.name},\n\n` +
-        `we received the message you've sent via our contact form and will answer as soon as possible.\n\n` +
-        `All the best,\nyour Subucoola Team!`;
+      ? `${request.name},\n\n` +
+        `Vielen Dank für Ihre Kontaktanfrage.` +
+        `Ich haben Ihre Nachricht erhalten und werde mich sobald wie möglich bei Ihnen zurückmelden.\n\n` +
+        `Mit freundlichen Grüßen,\n` +
+        `Martin Reiche\n\n` +
+        `--\n` +
+        `Dr. Martin Reiche \n` +
+        `Wandererstraße 89c\n` +
+        `90431 Nürnberg\n` +
+        `martin@reiche.dev\n` +
+        `martinreiche.dev\n`
+      : `${request.name},\n\n` +
+        `thank you very much for yout contact request.` +
+        `I received the message you have sent me and will reply as soon as possible.\n\n` +
+        `Kind regards,\n` +
+        `Martin Reiche\n\n` +
+        `--\n` +
+        `Martin Reiche, PhD \n` +
+        `Wandererstraße 89c\n` +
+        `90431 Nuremberg\n` +
+        `martin@reiche.dev\n` +
+        `martinreiche.dev\n`;
 
   const data = {
     from: functions.config().mailgun.from_address,
