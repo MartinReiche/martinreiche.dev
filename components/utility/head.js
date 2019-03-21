@@ -6,7 +6,7 @@ import { BASE_URL } from '../../config';
 
 const logo = '/static/portrait_sm.png';
 const description =
-  'Full Stack Webentickler aus Nürnberg ✓ Entwicklung individueller Webapplikationen. Spezialist für JavaScript: React.js, Node.js, Firebase, Electron, Material UI, Next.js';
+  'Full Stack Webentickler aus N&uuml;rnberg. Entwicklung individueller Webapplikationen. Spezialist f&uuml;r JavaScript: React.js, Node.js, Firebase, Electron, Material UI, Next.js';
 
 export function Head(props) {
   const { og, title } = props;
@@ -14,31 +14,28 @@ export function Head(props) {
   return (
     <NextHead>
       <title>{title || 'Martin Reiche - Full Stack Web Developer'}</title>
+      <meta name="description" content={description} />
       <meta
-        name="description"
-        content="Full Stack Webentickler aus Nürnberg ✓ Entwicklung individueller Webapplikationen. Spezialist für JavaScript: React.js, Node.js, Firebase, Electron, Material UI, Next.js"
+        property="og:title"
+        content={title || 'Martin Reiche - Full Stack Web Developer'}
       />
-      <meta property="og:title" content={title || 'Martin Reiche'} />
       <meta property="og:type" content="website" />
       <meta
         property="og:url"
         content={og && og.url ? BASE_URL + og.url : BASE_URL}
       />
+      <meta property="og:image:width" content="285" />
+      <meta property="og:image:height" content="428" />
       <meta
         property="og:image"
-        content={og && og.img ? og.img : BASE_URL + logo}
+        content={og && og.img ? og.img : BASE_URL + '/static/og-image.jpg'}
       />
-      {og && og.description ? (
-        <meta property="og:description" content={og.description} />
-      ) : (
-        <meta property="og:description" content={description} />
-      )}
+      <meta
+        property="og:description"
+        content={(og && og.description) || description}
+      />
       <meta property="og:locale" content="de_DE" />
       <meta property="og:locale:alternate" content="en_US" />
-      <meta
-        property="og:site_name"
-        content="Martin Reiche - Full Stack Web Developer"
-      />
     </NextHead>
   );
 }

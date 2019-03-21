@@ -31,11 +31,6 @@ export function Clients() {
               <img src="/static/hartwoch.png" alt="" className="image" />
             </a>
           </div>
-          <div style={{ width: '200px' }} className="brand">
-            <a href="http://scherdichrein.de" target="_blank">
-              <img src="/static/scherdichrein.svg" alt="" className="image" />
-            </a>
-          </div>
         </div>
       </div>
       <style jsx>{`
