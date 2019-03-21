@@ -121,10 +121,11 @@ export function Stack() {
         @media all and (max-width: 425px) {
           .description {
             margin-left: 0px;
-            margin-top: 20px;
+            margin-top: 40px;
           }
           .item {
             flex-direction: column;
+            align-items: center;
           }
         }
       `}</style>
