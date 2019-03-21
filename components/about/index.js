@@ -7,8 +7,8 @@ export function About() {
   function renderText() {
     return locale === 'de' ? (
       <div>
-        Ich bin Full Stack Web Developer, der sich auf die Entwicklung
-        individueller interaktiver Webapplikationen spezialisiert hat. Ich liebe
+        Als Full Stack Web Developer habe ich mich auf die Entwicklung
+        individueller interaktiver Webapplikationen spezialisiert. Ich liebe
         JavaScript und nutze es sowohl zur Entwicklung von Client- als auch
         Serverapplikationen. <br />
         <br /> Ich habe einen neurowissenschaftlichen Hintergrund wodurch ich
@@ -18,7 +18,7 @@ export function About() {
       </div>
     ) : (
       <div>
-        I am a full stack web developer specialized in building individually
+        As a full-stack web developer I'm specialized in building individually
         tailored rich web applications. I love all things JavaScript hence I'm
         using it heavily both on the server and the client. <br />
         <br />I have a PhD in neuroscience and a strong background in data
