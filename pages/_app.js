@@ -6,7 +6,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import getPageContext from '../utils/getPageContext';
 
 import { StateProvider, rootReducer, initialState } from '../state';
-import NotificationSnackBar from '../components/notification';
+import { Notification } from '../components/utility';
 
 class MyApp extends App {
   pageContext = getPageContext();
@@ -41,7 +41,7 @@ class MyApp extends App {
               {/* Pass pageContext to the _document though the renderPage enhancer
                 to render collected styles on server-side. */}
               <Component pageContext={this.pageContext} {...pageProps} />
-              <NotificationSnackBar />
+              <Notification />
             </ThemeProvider>
           </StylesProvider>
         </StateProvider>

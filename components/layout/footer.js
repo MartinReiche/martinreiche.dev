@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Social from '../social';
+import Social from './social';
 import { getState } from '../../state';
 
 export function Footer() {

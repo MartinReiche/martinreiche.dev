@@ -6,5 +6,6 @@ export const firebase = {
   storageBucket: 'martinreiche-dev.appspot.com',
   messagingSenderId: '166637331401'
 };
+export const BASE_URL = 'https://martinreiche.dev';
 
 export default { firebase };

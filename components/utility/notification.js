@@ -80,4 +80,5 @@ NotificationSnackBar.propTypes = {
   classes: PropTypes.object.isRequired
 };
 
-export default withStyles(styles)(NotificationSnackBar);
+export const Notification = withStyles(styles)(NotificationSnackBar);
+export default Notification;

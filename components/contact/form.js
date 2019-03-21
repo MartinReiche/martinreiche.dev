@@ -2,7 +2,7 @@ import React, { useState, Fragment } from 'react';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 
-import Loading from '../loading';
+import { Loading } from '../utility';
 import { Form } from '../forms';
 
 import {
@@ -29,7 +29,7 @@ const labels = {
   name: { de: 'Name *', en: 'Name *' },
   email: { de: 'Email *', en: 'Email *' },
   body: { de: 'Kommentar *', en: 'Comment *' },
-  send: { de: 'Absenden', en: 'Send' }
+  send: { de: 'Senden', en: 'Send' }
 };
 const errors = {
   missing: { de: 'ist erforderlich', en: 'is required' }

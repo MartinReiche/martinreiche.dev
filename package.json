@@ -8,7 +8,8 @@
     "build": "next build && next export",
     "start": "next start",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "npm run build && firebase deploy --only hosting"
+    "deploy": "npm run clean && npm run build && firebase deploy --only hosting",
+    "clean": "rimraf out"
   },
   "repository": {
     "type": "git",
@@ -30,5 +31,8 @@
     "prop-types": "^15.7.2",
     "react": "^16.8.4",
     "react-dom": "^16.8.4"
+  },
+  "devDependencies": {
+    "rimraf": "^2.6.3"
   }
 }

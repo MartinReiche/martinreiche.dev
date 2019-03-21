@@ -1,11 +1,11 @@
 import React from 'react';
 
-import Header from '../components/header';
-import Footer from '../components/footer';
+import { Header, Footer } from '../components/layout';
 import About from '../components/about';
 import Clients from '../components/clients';
 import Stack from '../components/stack';
 import Contact from '../components/contact';
+import { Head } from '../components/utility';
 
 function Home() {
   return (
