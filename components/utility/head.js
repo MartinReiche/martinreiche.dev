@@ -4,23 +4,21 @@ import NextHead from 'next/head';
 
 import { BASE_URL } from '../../config';
 
-const logo = '/static/logo.png';
+const logo = '/static/portrait_sm.png';
+const description =
+  'Full Stack Webentickler aus Nürnberg ✓ Entwicklung individueller Webapplikationen. Spezialist für JavaScript: React.js, Node.js, Firebase, Electron, Material UI, Next.js';
 
 export function Head(props) {
   const { og, title } = props;
 
   return (
     <NextHead>
-      <title>
-        {title ||
-          'Subucoola Textildruckerei - T-Shirt Druck in Nürnberg, Fürth, Erlangen'}
-      </title>
-
+      <title>{title || 'Martin Reiche - Full Stack Web Developer'}</title>
       <meta
         name="description"
-        content="Textildruck in Nürnberg ✓ Mehrfarbige Kleinauflage (ab 10 Stück) bis zur Großauflage. Veredelt mit GOTS Discharge, Siebdruck, Digitaldruck, Labelservice, Hangtags! FairWearShirts = Standard"
+        content="Full Stack Webentickler aus Nürnberg ✓ Entwicklung individueller Webapplikationen. Spezialist für JavaScript: React.js, Node.js, Firebase, Electron, Material UI, Next.js"
       />
-      <meta property="og:title" content={title || 'Subucoola'} />
+      <meta property="og:title" content={title || 'Martin Reiche'} />
       <meta property="og:type" content="website" />
       <meta
         property="og:url"
@@ -30,12 +28,17 @@ export function Head(props) {
         property="og:image"
         content={og && og.img ? og.img : BASE_URL + logo}
       />
-      {og && og.description && (
+      {og && og.description ? (
         <meta property="og:description" content={og.description} />
+      ) : (
+        <meta property="og:description" content={description} />
       )}
       <meta property="og:locale" content="de_DE" />
       <meta property="og:locale:alternate" content="en_US" />
-      <meta property="og:site_name" content="Subucoola" />
+      <meta
+        property="og:site_name"
+        content="Martin Reiche - Full Stack Web Developer"
+      />
     </NextHead>
   );
 }

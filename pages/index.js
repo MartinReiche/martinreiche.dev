@@ -10,6 +10,7 @@ import { Head } from '../components/utility';
 function Home() {
   return (
     <div>
+      <Head title="Martin Reiche - Full Stack Web Developer" />
       <Header />
       <About />
       <Clients />
