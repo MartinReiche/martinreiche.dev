@@ -1,9 +1,23 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 import { getState } from '../../state';
 
 export function About() {
+  const [visible, setVisible] = useState(false);
   const [{ locale }] = getState();
+
+  useEffect(() => {
+    const image = new Image();
+    image.addEventListener('load', () => {
+      setVisible(true);
+    });
+    image.src = '/static/portrait_sm.png';
+  }, []);
+
+  function onLoadImage() {
+    setVisible(true);
+  }
+
   function renderText() {
     return locale === 'de' ? (
       <div>
@@ -27,6 +41,7 @@ export function About() {
       </div>
     );
   }
+
   return (
     <div className="container">
       <div className="center">
@@ -40,14 +55,13 @@ export function About() {
           font-family: 'Roboto';
           font-weight: 200;
           font-size: 20px;
-
           background-color: #008090;
-           {
-            /* background: #008090aa url('/static/about_bg.svg') no-repeat left top; */
-          }
           padding: 100px 0px;
+          overflow-x: hidden;
         }
         .center {
+          opacity: ${visible ? '1' : '0'};
+          transition: opacity 200ms ease-out;
           max-width: 1024px;
           margin: auto;
           display: flex;

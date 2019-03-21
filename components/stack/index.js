@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useReducer, useEffect } from 'react';
 import { getState } from '../../state';
 
 const title = {
@@ -6,10 +6,60 @@ const title = {
   en: 'Technology Stack'
 };
 
+const preloadImgUrls = [
+  '/static/subucoola.svg',
+  '/static/yar.svg',
+  '/static/brandt.jpg',
+  '/static/hartwoch.png'
+];
+
+const initialState = { loaded: [], ready: false };
+
+function reducer(state, action) {
+  switch (action.type) {
+    case 'add':
+      return { ...state, loaded: [...state.loaded, action.payload] };
+    case 'ready':
+      return { ...state, ready: true };
+    default:
+      throw new Error(`Unknown action of type ${action.type}`);
+  }
+}
+
 import texts from './texts';
 
 export function Stack() {
+  const [{ loaded, ready, visible }, dispatchLocal] = useReducer(
+    reducer,
+    initialState
+  );
   const [{ locale }] = getState();
+
+  useEffect(() => {
+    const images = [];
+    preloadImgUrls.forEach(url => {
+      const image = new Image();
+      image.addEventListener('load', () => onLoadImage(url));
+      image.src = url;
+      images.push(image);
+    });
+    return function cleanup() {
+      images.forEach(image => {
+        image.removeEventListener('load', () => onLoadImage(url));
+      });
+    };
+  }, []);
+
+  useEffect(() => {
+    if (loaded.length === preloadImgUrls.length) {
+      dispatchLocal({ type: 'ready' });
+    }
+  }, [loaded.length]);
+
+  function onLoadImage(url) {
+    dispatchLocal({ type: 'add', payload: url });
+  }
+
   return (
     <div className="container">
       <div className="center">
@@ -75,6 +125,8 @@ export function Stack() {
           background-color: #008090;
         }
         .center {
+          opacity: ${ready ? '1' : '0'};
+          transition: opacity 200ms ease-out;
           padding: 10px;
           max-width: 1024px;
           margin: auto;
