@@ -15,23 +15,23 @@ export function sendContactMailConfirmation(request: any) {
   const msgBody =
     request.locale === 'de'
       ? `${request.name},\n\n` +
-        `Vielen Dank für Ihre Kontaktanfrage.` +
+        `Vielen Dank für Ihre Kontaktanfrage. ` +
         `Ich haben Ihre Nachricht erhalten und werde mich sobald wie möglich bei Ihnen zurückmelden.\n\n` +
         `Mit freundlichen Grüßen,\n` +
         `Martin Reiche\n\n` +
         `--\n` +
-        `Dr. Martin Reiche \n` +
-        `Full Stack Web Developer` +
+        `Dr. Martin Reiche\n` +
+        `Full Stack Web Developer\n` +
         `martin@reiche.dev\n` +
         `martinreiche.dev\n`
       : `${request.name},\n\n` +
-        `thank you very much for yout contact request.` +
-        `I received the message you have sent me and will reply as soon as possible.\n\n` +
+        `thank you very much for yout contact request. ` +
+        `I received the message you have sent me. I will reply as soon as possible.\n\n` +
         `Kind regards,\n` +
         `Martin Reiche\n\n` +
         `--\n` +
         `Martin Reiche, PhD \n` +
-        `Full Stack Web Developer` +
+        `Full Stack Web Developer\n` +
         `martin@reiche.dev\n` +
         `martinreiche.dev\n`;
 
