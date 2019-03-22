@@ -21,8 +21,7 @@ export function sendContactMailConfirmation(request: any) {
         `Martin Reiche\n\n` +
         `--\n` +
         `Dr. Martin Reiche \n` +
-        `Wandererstraße 89c\n` +
-        `90431 Nürnberg\n` +
+        `Full Stack Web Developer` +
         `martin@reiche.dev\n` +
         `martinreiche.dev\n`
       : `${request.name},\n\n` +
@@ -32,8 +31,7 @@ export function sendContactMailConfirmation(request: any) {
         `Martin Reiche\n\n` +
         `--\n` +
         `Martin Reiche, PhD \n` +
-        `Wandererstraße 89c\n` +
-        `90431 Nuremberg\n` +
+        `Full Stack Web Developer` +
         `martin@reiche.dev\n` +
         `martinreiche.dev\n`;
 
