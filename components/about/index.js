@@ -28,7 +28,7 @@ export function About() {
         <br /> Ich habe einen neurowissenschaftlichen Hintergrund wodurch ich
         Erfahrungen im Bereich der Analyse komplexer Daten habe. Tief drin bin
         ich noch immer passionierter Wissenschaftler, der es liebt komplexe
-        Probleme zu lösen. Forden Sie mich heraus!
+        Probleme zu lösen. Fordern Sie mich heraus!
       </div>
     ) : (
       <div>
@@ -36,7 +36,7 @@ export function About() {
         tailored rich web applications. I love all things JavaScript hence I'm
         using it heavily both on the server and the client. <br />
         <br />I have a PhD in neuroscience and a strong background in data
-        intensive computation. Deep inside I'm a passionate scientist that loves
+        intensive computation. Deep inside I'm a passionate scientist who loves
         to tackle complex problems. Challenge me!{' '}
       </div>
     );

@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 
 export default {
   react: {
@@ -19,7 +19,7 @@ export default {
     de: (
       <div>
         Node.js ist eine JavaScript Laufzeitumgebung, basierend auf Chromes V8
-        engine, die es ermöglicht JavaScript außerhalb des browsers zu nutzen.
+        engine, die es ermöglicht, JavaScript außerhalb des Browsers zu nutzen.
       </div>
     ),
     en: (
@@ -32,9 +32,9 @@ export default {
   firebase: {
     de: (
       <div>
-        Firebase ist eine Entwicklungsplatform für mobile- und Webapplikationen
+        Firebase ist eine Entwicklungsplatform für mobile und Webapplikationen,
         die eine Vielzahl an services und Tools zur Entwicklung hochqualitativer
-        Applikationen bereitstellt
+        Applikationen bereitstellt.
       </div>
     ),
     en: (
