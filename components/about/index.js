@@ -1,22 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
-import { getState, setAboutLoaded } from '../../state';
+import { getState } from '../../state';
 
 export function About() {
-  const [{ locale, layout }, dispatchGlobal] = getState();
-
-  useEffect(() => {
-    const image = new Image();
-    image.addEventListener('load', onLoadImage);
-    image.src = '/static/portrait_sm.png';
-    return function cleanup() {
-      image.removeEventListener('load', onLoadImage);
-    };
-  }, []);
-
-  function onLoadImage() {
-    dispatchGlobal(setAboutLoaded());
-  }
+  const [{ locale }] = getState();
 
   function renderText() {
     return locale === 'de' ? (
@@ -60,8 +47,6 @@ export function About() {
           overflow-x: hidden;
         }
         .center {
-          opacity: ${layout.aboutLoaded ? '1' : '0'};
-          transition: opacity 200ms ease-out;
           max-width: 1024px;
           margin: auto;
           display: flex;
