@@ -8,7 +8,7 @@ export function About() {
   function renderText() {
     return locale === 'de' ? (
       <div>
-        Als Full Stack Web Developer habe ich mich auf die Entwicklung
+        Ich bin Webentwickler aus Nürnberg und habe ich mich auf die Entwicklung
         individueller interaktiver Webapplikationen spezialisiert. Ich liebe
         JavaScript und nutze es sowohl zur Entwicklung von Client- als auch
         Serverapplikationen. <br />
@@ -19,9 +19,10 @@ export function About() {
       </div>
     ) : (
       <div>
-        As a full-stack web developer I'm specialized in building individually
-        tailored rich web applications. I love all things JavaScript hence I'm
-        using it heavily both on the server and the client. <br />
+        I am a full-stack web developer from Nuremberg in Germany specialized in
+        building individually tailored rich web applications. I love all things
+        JavaScript hence I'm using it heavily both on the server and the client.{' '}
+        <br />
         <br />I have a PhD in neuroscience and a strong background in data
         intensive computation. Deep inside I'm a passionate scientist who loves
         to tackle complex problems. Challenge me!{' '}
