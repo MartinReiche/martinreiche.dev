@@ -4,10 +4,10 @@ import NextHead from 'next/head';
 
 import { BASE_URL } from '../../config';
 
-const logo = '/static/portrait_sm.png';
 const description =
-  'Full Stack Webentickler aus N&uuml;rnberg. Entwicklung individueller Webapplikationen. Spezialist f&uuml;r JavaScript: React.js, Node.js, Firebase, Electron, Material UI, Next.js';
-
+  'Fullstack Webentickler aus Nürnberg. Entwicklung individueller Webapplikationen und Webseiten. Spezialist für JavaScript: React.js, Node.js, Firebase, Electron, Material UI, Next.js';
+const keywords =
+  'Webentwickler,Webentwiclung,Freelancer,Nürnberg,Erlangen,Fürth,Programmierer,Javascript,Ruby,Python,Node,React,Graphql';
 export function Head(props) {
   const { og, title } = props;
 
@@ -15,6 +15,7 @@ export function Head(props) {
     <NextHead>
       <title>{title || 'Martin Reiche - Full Stack Web Developer'}</title>
       <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
       <meta
         property="og:title"
         content={title || 'Martin Reiche - Full Stack Web Developer'}
