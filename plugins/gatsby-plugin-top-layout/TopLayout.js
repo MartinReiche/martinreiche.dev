@@ -18,9 +18,7 @@ export default function TopLayout(props) {
           href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
           rel="stylesheet"
         />
-        <script src="https://js.stripe.com/v3/"></script>
       </Helmet>
-
       <ThemeProvider theme={theme}>
         <CssBaseline />
         {props.children}
