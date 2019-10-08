@@ -1,0 +1,26 @@
+steps:
+  # Decrypt .env and service account credentials
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args:
+      - kms
+      - decrypt
+      - --ciphertext-file=.env.enc
+      - --plaintext-file=.env
+      - --location=global
+      - --keyring=martinreiche-dev
+      - --key=cloudbuild-env
+
+  # Install
+  - name: node:12.10.0
+    entrypoint: npm
+    args: ['install']
+
+  # Build
+  - name: node:12.10.0
+    entrypoint: npm
+    args: ['run', 'build']
+
+  # Build
+  - name: node:12.10.0
+    entrypoint: npm
+    args: ['run', 'deploy']
