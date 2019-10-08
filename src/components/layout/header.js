@@ -22,8 +22,10 @@ const useStyles = makeStyles(() => ({
     alignItems: 'flex-end',
   },
   logoContainer: {
+    maxWidth: 400,
     marginBottom: 10,
     left: 0,
+    flex: '1 1 auto',
   },
   social: {
     position: 'absolute',
@@ -38,8 +40,8 @@ export function Header() {
     query {
       logo: file(relativePath: { eq: "logo.png" }) {
         childImageSharp {
-          fixed(width: 400) {
-            ...GatsbyImageSharpFixed
+          fluid(maxWidth: 400) {
+            ...GatsbyImageSharpFluid_noBase64
           }
         }
       }
@@ -49,7 +51,7 @@ export function Header() {
     <div className={classes.container}>
       <Container maxWidth="lg" className={classes.center}>
         <div className={classes.logoContainer}>
-          <Img fixed={data.logo.childImageSharp.fixed} />
+          <Img fluid={data.logo.childImageSharp.fluid} />
         </div>
         <div className={classes.social}>
           <Social />
