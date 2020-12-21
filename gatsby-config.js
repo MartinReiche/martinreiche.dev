@@ -1,17 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: {
-      de: `Martin Reiche - Full Stack Webentwickler`,
-      en: `Martin Reiche - Full Stack Web Developer`,
-    },
-    description: {
-      de:
-        `Full Stack Webentickler und Data Scientist aus Nürnberg. Entwicklung individueller Webapplikationen und Webseiten. ` +
-        `Spezialist für JavaScript: React.js, Node.js, Firebase, Electron, Material UI, Next.js`,
-      en:
-        `Full stack web developer and data scientist from Nuremberg, Germany. Development of individual web applications und websites. ` +
-        `Expert in modern JavaScript technologies: React.js, Node.js, Firebase, Electron, Material UI, Next.js`,
-    },
+    title: 'Martin Reiche - Full Stack Web Developer',
+    descriptionDe: 'Full Stack Webentickler und Data Scientist.',
+    descriptionEn: 'Full stack web developer and data scientist.',
     keywords: {
       de: [
         'Webentwickler',
@@ -19,22 +10,14 @@ module.exports = {
         'Data Scientist',
         'DevOps',
         'CI/CD',
+        'Kubernetes',
         'Progressive Web Apps',
-        'Freelancer',
-        'Nürnberg',
-        'Erlangen',
-        'Fürth',
         'Programmierer',
         'Javascript',
-        'Ruby',
         'Python',
         'Node.js',
         'React.js',
         'Graphql',
-        'Firebase',
-        'Express.js',
-        'Next.js',
-        'Gatsby.js',
         'Electron',
       ],
       en: [
@@ -43,23 +26,17 @@ module.exports = {
         'data scientist',
         'DevOps',
         'CI/CD',
+        'Kubernetes',
         'Progressive Web Apps',
-        'Freelancer',
-        'Nuremberg',
-        'Erlangen',
-        'Fürth',
         'programmer',
         'Javascript',
-        'Ruby',
         'Python',
         'Node.js',
         'React.js',
         'Graphql',
-        'Firebase',
-        'Express.js',
-        'Next.js',
-        'Gatsby.js',
         'Electron',
+        'Angular',
+
       ],
     },
     author: `Martin Reiche`,
