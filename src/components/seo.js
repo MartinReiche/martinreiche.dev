@@ -9,14 +9,9 @@ function SEO({ description, locale, meta, title, keywords }) {
       query {
         site {
           siteMetadata {
-            title {
-              de
-              en
-            }
-            description {
-              de
-              en
-            }
+            title 
+            descriptionEn
+            descriptionDe
             author
             keywords {
               de
@@ -28,7 +23,8 @@ function SEO({ description, locale, meta, title, keywords }) {
     `
   );
 
-  const metaDescription = description || site.siteMetadata.description;
+  const metaDescriptionDe = description || site.siteMetadata.descriptionDe;
+  const metaDescriptionEn = description || site.siteMetadata.descriptionEn;
   const metaTitle = title || site.siteMetadata.title;
   const metaKeywords = keywords || site.siteMetadata.keywords;
 
@@ -37,12 +33,12 @@ function SEO({ description, locale, meta, title, keywords }) {
       htmlAttributes={{
         lang: locale,
       }}
-      title={metaTitle[locale]}
-      titleTemplate={`%s | ${metaTitle[locale]}`}
+      title={metaTitle}
+      titleTemplate={`%s | ${metaTitle}`}
       meta={[
         {
           name: `description`,
-          content: metaDescription[locale],
+          content: locale === 'de' ? metaDescriptionDe : metaDescriptionEn,
         },
         {
           name: `keywords`,
@@ -50,11 +46,11 @@ function SEO({ description, locale, meta, title, keywords }) {
         },
         {
           property: `og:title`,
-          content: metaTitle[locale],
+          content: metaTitle,
         },
         {
           property: `og:description`,
-          content: metaDescription[locale],
+          content: metaDescriptionEn,
         },
         {
           property: `og:type`,
@@ -70,11 +66,11 @@ function SEO({ description, locale, meta, title, keywords }) {
         },
         {
           name: `twitter:title`,
-          content: metaTitle[locale],
+          content: metaTitle,
         },
         {
           name: `twitter:description`,
-          content: metaDescription[locale],
+          content: metaDescriptionEn,
         },
       ].concat(meta)}
     />
