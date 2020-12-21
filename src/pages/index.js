@@ -11,7 +11,7 @@ export default ({ pageContext: { locale } }) => (
     <Seo locale={locale} />
     <About locale={locale} />
     <Stack locale={locale} />
-    <Clients locale={locale} />
-    <Contact locale={locale} />
+    {/*<Clients locale={locale} />*/}
+    {/*<Contact locale={locale} />*/}
   </Layout>
 );
