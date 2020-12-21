@@ -5,16 +5,16 @@ import Social from './social';
 const useStyles = makeStyles(() => ({
   container: {
     height: 'calc(100vh - 100px)',
-    backgroundColor: '#008090',
+    backgroundColor: '#ececec',
   },
   footer: {
     display: 'flex',
     justifyContent: 'space-between',
     margin: 'auto',
     fontWeight: 300,
-    color: '#e3e3e3',
     padding: 10,
     fontSize: 20,
+    color: '#089',
     '@media all and (max-width: 512px)': {
       flexDirection: 'column',
     },
@@ -36,19 +36,11 @@ export function Footer({ locale }) {
         <div>
           {locale === 'de' ? (
             <div>
-              Dr. Martin Reiche <br />
-              Full Stack Web Entwickler <br />
-              Wandererstraße 89c <br />
-              90431 Nürnberg <br />
-              martin@reiche.dev
+              Dr. Martin Reiche | martin@reiche.dev
             </div>
           ) : (
             <div>
-              Martin Reiche, PhD <br />
-              Full Stack Web Developer <br />
-              Wandererstraße 89c <br />
-              90431 Nuremberg, Germany <br />
-              martin@reiche.dev
+              Martin Reiche, PhD | martin@reiche.dev
             </div>
           )}
         </div>

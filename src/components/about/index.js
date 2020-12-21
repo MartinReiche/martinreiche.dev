@@ -12,6 +12,7 @@ const useStyles = makeStyles(() => ({
     paddingTop: 100,
     paddingBottom: 100,
     overflowX: 'hidden',
+    height: 'calc(100vh - 300px)',
   },
   center: {
     margin: 'auto',
@@ -46,27 +47,11 @@ const useStyles = makeStyles(() => ({
 function text(locale) {
   return locale === 'de' ? (
     <div>
-      Ich bin Webentwickler und Data Scientist aus Nürnberg und habe ich mich
-      auf die Entwicklung individueller interaktiver Webapplikationen
-      spezialisiert. Ich arbeite mit modernen Webtechnologien zur Entwicklung
-      von Client- und Serverapplikationen mithilfe von CI/CD Pipelines und
-      cloudbasierter Infrastruktur.
-      <br />
-      <br />
-      Ich habe einen starken wissenschaftlichen Hintergrund im Bereich der
-      Analyse komplexer Daten, experimenteller Methodik und befasse mich gern
-      mit komplexen Problemen.
+        Experimental Psychologist. Developer. Data Analytics. Automotive.
     </div>
   ) : (
     <div>
-      I am a full-stack web developer and data scientist from Nuremberg in
-      Germany. I specialized in building individually tailored rich web
-      applications. I use modern web technologies both on the server and the
-      client and I leverage the power of CI/CD pipelines and cloud-based
-      infrastructure.
-      <br />
-      <br />I have a strong scientific background related to data analysis,
-      scientific methodology and I like to tackle complex problems.
+        Experimental Psychologist. Developer. Data Analytics. Automotive.
     </div>
   );
 }
